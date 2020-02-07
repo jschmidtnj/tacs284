@@ -1,5 +1,7 @@
 package week2;
 
+// Java 2
+
 public class Ex2 {
 
 	public static class Computer {
@@ -24,7 +26,7 @@ public class Ex2 {
 			return 0.0;
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Computer aComputer = new Laptop();
 		Desktop aDesktop = new Desktop();

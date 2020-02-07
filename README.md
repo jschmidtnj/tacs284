@@ -1,2 +1,2 @@
-# cs 284 ta stuff
+# cs 284 ta info
 
