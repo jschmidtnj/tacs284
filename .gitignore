@@ -1,4 +1,4 @@
 *.metadata/
 out/
-.idea/
+*.idea/
 *bin/
