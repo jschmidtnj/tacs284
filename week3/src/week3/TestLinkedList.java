@@ -9,5 +9,7 @@ public class TestLinkedList {
 		test.add(null);
 		test.add(60);
 		System.out.println(test);
+		System.out.println(test.allNonNull());
 	}
 }
+
