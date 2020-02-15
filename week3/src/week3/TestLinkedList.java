@@ -10,6 +10,8 @@ public class TestLinkedList {
 		test.add(60);
 		System.out.println(test);
 		System.out.println(test.allNonNull());
+		test.stutterNL(3);
+		System.out.println(test);
 	}
 }
 

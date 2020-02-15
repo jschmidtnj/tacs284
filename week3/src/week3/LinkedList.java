@@ -42,6 +42,32 @@ public class LinkedList<E> {
 		}
 		return true;
 	}
+
+	public boolean mem(E el) {
+		Node<E> curr = head;
+		while (curr != null) {
+			if (curr.data == el) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * SingleLL<E> stutterNL(Integer n) that repeats each element in the list n times. Eg. Given [1, 2, 3] and
+	the number 3, it should return [1, 1, 1, 2, 2, 2, 3, 3, 3].	
+	 */
+	public void stutterNL(Integer n) {
+		Node<E> curr = head;
+		while (curr != null) {
+			Node<E> next = curr.next;
+			for (Integer i = 0; i < n - 1; i++) {
+				curr.next = new Node<E>(curr.data);
+				curr = curr.next;
+			}
+			curr.next = next;
+		}
+	}
 	
 	public String toString() {
 		Node<E> current = head;
