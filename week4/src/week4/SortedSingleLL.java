@@ -1,7 +1,8 @@
 package week4;
 
-public class SortedSingleLL<E> {
+public class SortedSingleLL<E extends Comparable<E>> {
 	private Node head;
+	// tail for min
 
 	private class Node {
 		private Node next;
@@ -19,6 +20,7 @@ public class SortedSingleLL<E> {
 	}
 
 	public SortedSingleLL() {
+		this.head = null;
 	}
 
 	/**
@@ -27,7 +29,18 @@ public class SortedSingleLL<E> {
 	 * @param newData
 	 */
 	public void add(E newData) {
-
+		Node curr = head;
+		Node newNode = new Node(newData);
+		if (head == null || head.data.compareTo(newData) >= 0) {
+			curr.next = head;
+			head = newNode;
+		} else {
+			while (curr.next != null && curr.next.data.compareTo(newData) < 0) {
+				curr = curr.next;
+			}
+			newNode.next = curr.next;
+			curr.next = newNode;
+		}
 	}
 
 	/**
@@ -36,7 +49,14 @@ public class SortedSingleLL<E> {
 	 * @param data
 	 */
 	public boolean contains(E data) {
-		return true;
+		Node current = head;
+		while (current != null) {
+			if (current.data == data) {
+				return true;
+			}
+			current = current.next;
+		}
+		return false;
 	}
 
 	/**
@@ -45,7 +65,23 @@ public class SortedSingleLL<E> {
 	 * @param data
 	 */
 	public void remove(E data) {
-
+		if (data == null) {
+			return;
+		}
+		Node current = head;
+		Node previous = null;
+		while (current != null) {
+			if (current.data == data) {
+				if (previous != null) {
+					previous.next = current.next;
+				} else {
+					head = current.next;
+				}
+				break;
+			}
+			previous = current;
+			current = current.next;
+		}
 	}
 
 	@Override
