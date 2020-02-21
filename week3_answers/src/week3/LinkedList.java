@@ -8,18 +8,13 @@ public class LinkedList<E> {
 	private Node<E> head;
 	private int size;
 
-	private class Node<E> {
-		private Node<E> next;
-		private E data;
+	private class Node<F> {
+		private Node<F> next;
+		private F data;
 
-		public Node(E data, Node<E> next) {
+		public Node(F data, Node<F> next) {
 			this.data = data;
 			this.next = next;
-		}
-
-		public Node(E data) {
-			this.data = data;
-			this.next = null;
 		}
 	}
 
@@ -114,10 +109,10 @@ public class LinkedList<E> {
 		}
 	}
 
-	public <E extends Number> Integer summation(Node<E> head) {
+	public <F extends Number> Integer summation(Node<F> head) {
 		try {
 			int result = 0;
-			for (Node<E> current = head; current != null; current = current.next) {
+			for (Node<F> current = head; current != null; current = current.next) {
 				result = result + current.data.intValue();
 			}
 			return result;

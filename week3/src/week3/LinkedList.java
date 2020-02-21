@@ -60,12 +60,14 @@ public class LinkedList<E> {
 	public void stutterNL(Integer n) {
 		Node<E> curr = head;
 		while (curr != null) {
-			Node<E> next = curr.next;
+			Node<E> next = curr.next == null ? null : new Node<E>(curr.next.data, curr.next.next);
+			curr.next = null;
 			for (Integer i = 0; i < n - 1; i++) {
 				curr.next = new Node<E>(curr.data);
 				curr = curr.next;
 			}
 			curr.next = next;
+			curr = curr.next;
 		}
 	}
 	

@@ -14,4 +14,3 @@ public class TestLinkedList {
 		System.out.println(test);
 	}
 }
-
