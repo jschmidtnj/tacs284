@@ -68,7 +68,8 @@ public class PairLinkedList {
 	 */
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("[");
+		StringBuilder sb = new StringBuilder();
+		// sb.append("[");
 		Pair p = head;
 		if (p != null) {
 			while (p.next != null) {
@@ -78,7 +79,7 @@ public class PairLinkedList {
 			}
 			sb.append(p);
 		}
-		sb.append("]");
+		// sb.append("]");
 		return sb.toString();
 	}
 
