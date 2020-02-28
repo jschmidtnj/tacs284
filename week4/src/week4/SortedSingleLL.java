@@ -31,9 +31,9 @@ public class SortedSingleLL<E extends Comparable<E>> {
 	public void add(E newData) {
 		Node curr = head;
 		Node newNode = new Node(newData);
-		if (head == null || head.data.compareTo(newData) >= 0) {
-			curr.next = head;
+		if (curr == null || curr.data.compareTo(newData) >= 0) {
 			head = newNode;
+			newNode.next = curr;
 		} else {
 			while (curr.next != null && curr.next.data.compareTo(newData) < 0) {
 				curr = curr.next;
@@ -51,7 +51,7 @@ public class SortedSingleLL<E extends Comparable<E>> {
 	public boolean contains(E data) {
 		Node current = head;
 		while (current != null) {
-			if (current.data == data) {
+			if (current.data.equals(data)) {
 				return true;
 			}
 			current = current.next;
@@ -92,7 +92,10 @@ public class SortedSingleLL<E extends Comparable<E>> {
 		if (!SortedSingleLL.class.isAssignableFrom(obj.getClass())) {
 			return false;
 		}
-		// final SortedSingleLL<E> other = (SortedSingleLL<E>) obj;
+		@SuppressWarnings("unchecked")
+		final SortedSingleLL<E> other = (SortedSingleLL<E>) obj;
+		// TODO - fix this function
+		System.out.println(other);
 		return true;
 	}
 
