@@ -23,7 +23,7 @@ public class Hierarchy {
 
 	public class mainClass extends abstractClass implements intA, intB {
 		public mainClass() {
-
+			
 		}
 
 		public void method1() {
