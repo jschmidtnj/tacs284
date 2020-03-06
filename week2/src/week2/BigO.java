@@ -99,7 +99,7 @@ public class BigO {
 			System.out.println("test");
 		}
 		for (int i = 0; i < n; i++) {
-			for (int j = 2; i < n; j *= i) {
+			for (int j = 2; j < n; j *= i) {
 				System.out.println("test");
 			}
 		}
