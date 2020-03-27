@@ -3,7 +3,6 @@ package week5;
 /**
  * 
  * compresses linked list odd numbers into pairs
- * 
  * @author Joshua
  *
  */
@@ -100,6 +99,7 @@ public class PairLinkedList {
 		while (current != null) {
 			if (current.data % 2 == 0) {
 				current = current.next;
+				continue;
 			}
 			if (current.data != current_pair.data) {
 				current_pair.set_copy(current_count);
