@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="grading.RunScript" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-04-27T15:10:32" hostname="jarvis-3" time="0.371">
+  <properties/>
+  <testcase name="runTest()" classname="grading.RunScript" time="0.371">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[File created: audreygong.txt
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

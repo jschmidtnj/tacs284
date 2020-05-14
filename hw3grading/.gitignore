@@ -1,0 +1,7 @@
+# ignore output files
+output/
+nocompile/
+nofiles/
+input/
+current/
+src/main/java/grading/*
